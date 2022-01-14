@@ -1,0 +1,58 @@
+html {
+    background-color: black;
+    color:white;
+}
+
+div {
+    background-color: black;
+}
+
+.gates {
+    padding-left: 20vw;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    gap: 10px;
+    color:white;
+}
+
+.gate {
+    align-self: center;
+    color:white;
+}
+
+header {
+    background-color: black;
+    margin: 1%;
+}
+
+nav {
+    background-color: black;
+}
+
+.logs {
+    padding-left: 10vw;
+}
+
+.log_title {
+    color: white;
+}
+
+.log {
+    padding-left: 2vw;
+}
+
+.white {
+    color: white;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.red {
+    color: red;
+}
+
+a {
+    background-color: transparent;
+}

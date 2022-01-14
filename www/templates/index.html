@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div id="gates" class="gates">
+        {% for gate in GATES.items %}
+            <div id="gate-{{gate.0}}" class="gate">
+                <p>{{gate.1.label}}</p>
+                {{gate.1.waiters}}<br>
+                <a href="/?move_gate={{gate.0}}"><i class="fas fa-angle-double-right"></i></a><br>
+                {% for waiter in gate.1.waiters %}
+                <a href="/?move_people={{waiter}}"><p>{{waiter}}</p></a>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+    {% if Logs.Logs_activate %}
+    <div class="logs">
+        {% for level in Logs.items %}
+            <p class="log_title">{{level.1.label}}</p>
+            {% for log in level.1.data %}
+                <p class="log {{level.1.color}}">{{log}}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+{% endblock content %}
